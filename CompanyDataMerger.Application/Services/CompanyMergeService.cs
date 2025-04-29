@@ -1,5 +1,6 @@
 ﻿using CompanyDataMerger.Application.Interfaces;
 using CompanyDataMerger.Domain.Entities;
+using CompanyDataMerger.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 
 

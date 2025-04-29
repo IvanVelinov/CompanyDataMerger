@@ -1,5 +1,6 @@
 ﻿using CompanyDataMerger.Application.Interfaces;
 using CompanyDataMerger.Application.Services;
+using CompanyDataMerger.Domain.Interfaces;
 using CompanyDataMerger.Infrastructure.Data;
 using CompanyDataMerger.Infrastructure.Readers;
 using Microsoft.EntityFrameworkCore;

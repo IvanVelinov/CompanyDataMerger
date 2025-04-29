@@ -1,4 +1,4 @@
-﻿using CompanyDataMerger.Application.Interfaces;
+﻿using CompanyDataMerger.Domain.Interfaces;
 using CompanyDataMerger.Domain.Entities;
 using CompanyDataMerger.Infrastructure.Entities;
 using System.Text.Json;
