@@ -46,7 +46,7 @@ CompanyDataMerger/
 1. **Clone the project**
 
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/IvanVelinov/CompanyDataMerger
    ```
 
 2. **Configure DB connection**
