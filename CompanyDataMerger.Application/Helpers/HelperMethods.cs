@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unidecode.NET;
 
 namespace CompanyDataMerger.Application.Helpers
 {
@@ -346,7 +347,25 @@ namespace CompanyDataMerger.Application.Helpers
                     return "Unknown";
             }
         }
+        public static string NormalizeAndToPascalCase(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+                return input;
 
+            // Transliterate to ASCII
+            // This will partially fix some data like changing Лондон to London or Córdoba to Cordoba, Łódź to Lodz.
+            // Usefull when quering the data from the table per Location           
+            input = input.Unidecode();
+
+            //This will set the location to pascal case londont -> London, new orleans -> New Orleans
+            return string.Join(" ",
+                input
+                    .Trim()
+                    .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(word =>
+                        char.ToUpper(word[0]) + word.Substring(1).ToLower())
+            );
+        }
 
     }
 }

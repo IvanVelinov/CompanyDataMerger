@@ -15,6 +15,7 @@ namespace CompanyDataMerger.Application.Services
             StandardizeIndustry(company);
             StandardizeCompanySize(company);
             StandardizeCountry(company);
+            StandardizeLocation(company);
         }
 
         private static void StandardizeIndustry(Company company)
@@ -63,6 +64,14 @@ namespace CompanyDataMerger.Application.Services
             var normalized = company.Country.Trim().ToLowerInvariant();
 
             company.Country = HelperMethods.MapCountry(normalized);
+        }
+
+        public static void StandardizeLocation(Company company)
+        {
+            if (string.IsNullOrWhiteSpace(company.Location))
+                return;                  
+
+            company.Location = HelperMethods.NormalizeAndToPascalCase(company.Location);
         }
 
     }

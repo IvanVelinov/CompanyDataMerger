@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.4" />
+    <PackageReference Include="Unidecode.NET" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>

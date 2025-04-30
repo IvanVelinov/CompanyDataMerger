@@ -1,7 +1,9 @@
-﻿using CompanyDataMerger.Application.Interfaces;
+﻿using CompanyDataMerger.Application.Helpers;
+using CompanyDataMerger.Application.Interfaces;
 using CompanyDataMerger.Domain.Entities;
 using CompanyDataMerger.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
+using Unidecode.NET;
 
 
 namespace CompanyDataMerger.Application.Services

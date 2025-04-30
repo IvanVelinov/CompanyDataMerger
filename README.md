@@ -8,14 +8,14 @@ A C#/.NET 8 console application that merges company records from three different
 
 This solution addresses the following requirements:
 
-- ✅ Merge 3 data sources of company records (1 CSV, 2 JSON)
-- ✅ Remove duplicates based on key fields: **Domain**, LinkedIn URL, LinkedIn ID, Name
-- ✅ Respect **source priority** (lower number = higher priority)
+- Merge 3 data sources of company records (1 CSV, 2 JSON)
+- Remove duplicates based on key fields: **Domain**, LinkedIn URL, LinkedIn ID, Name
+- Respect **source priority** (lower number = higher priority)
   - Source 1: Priority 10
   - Source 2: Priority 20
   - Source 3: Priority 30
-- ✅ Ensure **all final records have a Domain**
-- ✅ Include and standardize core fields:
+- Ensure **all final records have a Domain**
+- Include and standardize core fields:
   - Industry
   - Company Size
   - Country
@@ -121,10 +121,3 @@ Final table `Companies` contains:
 
 ---
 
-## ✨ Notes
-
-- This solution is designed to scale and can be refactored into a background job or microservice.
-- It uses clean patterns like repository, interface segregation, and modular design.
-- All validation and transformation logic is easily unit-testable.
-
----
